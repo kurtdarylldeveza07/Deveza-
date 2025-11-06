@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Web Portfolio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body id="top">
+    <nav>
+        <div class="logo">Web Portfolio</div>
+        <ul>
+            <li><a href="#top">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main id="about">
+        <div class="intro-text">
+            <h1>I'm <span style="color:#e74c3c;">Kurt Daryll Deveza</span></h1>
+            <h3>2nd-year BS Information Technology Student</h3>
+            <p>
+                I am a 2nd-year BS Information Technology (BSIT) student at College of Sciences, Technology and Communications, Inc. I enjoy learning programming, web development, and exploring new technologies. I am also active in school events and volunteer work, serving as a Social Media and Creatives Officer, where I help create content, manage social media pages, and promote departmental activities.
+            </p>
+        </div>
+
+        <section class="profile-img-container">
+            <img src="./me.jpeg" alt="Profile Image" />
+        </section>
+    </main>
+
+    <section class="section" id="skills">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-item">
+                <h3>Programming Languages</h3>
+                <p>Proficient in Python, Java, and C++. Experienced in writing clean, efficient code for academic and personal projects.</p>
+            </div>
+            <div class="skill-item">
+                <h3>Web Development</h3>
+                <p>Skilled in HTML, CSS, and JavaScript. Can create responsive and modern web pages using frameworks like React.</p>
+            </div>
+            <div class="skill-item">
+                <h3>Database Management</h3>
+                <p>Knowledgeable in MySQL. Experienced in designing and managing databases for small-scale systems.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="education">
+        <h2 class="section-title">Education</h2>
+        <div class="education-card">
+            <h3>BS Information Technology</h3>
+            <p>Bachelor of Science in Information Technology (BSIT)
+College of Sciences, Technology and Communications, Inc. – 2nd Year</p>
+        </div>
+    </section>
+
+    <section class="section" id="awards">
+        <h2 class="section-title">Excellence / Awards</h2>
+        <div class="awards-list">
+            <div class="award-item">
+                <h3>SYNTAX Officer – Social Media Creatives</h3>
+                <p>Appointed as one of the SYNTAX officers for Social Media Creatives. I help design posts, manage content, and share updates to promote SYNTAX events and activities.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="hobbies">
+        <h2 class="section-title">Hobbies</h2>
+        <div class="hobbies-grid">
+            <div class="hobby-card">
+                <img src="iracing.jpg" alt="Hobby Image 1" />
+                <h3>Online Racing</h3>
+            </div>
+            <div class="hobby-card">
+                <img src="valo.jpg" alt="Hobby Image 2" />
+                <h3>Online FPS</h3>
+            </div>
+            <div class="hobby-card">
+                <img src="./red-bull-racing-rb21-japanese-.jpg" alt="Hobby Image 3" />
+                <h3>Watch F1</h3>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const text = "a full-stack developer.";
+        const typingElement = document.getElementById('typing-text');
+        let index = 0;
+
+        function type() {
+            if (index <= text.length) {
+                if (typingElement) {
+                    typingElement.textContent = text.slice(0, index) + '|';
+                }
+                index++;
+                setTimeout(type, 100);
+            } else if (typingElement) {
+                typingElement.textContent = text; 
+            }
+        }
+
+        type();
+    </script>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <p>&copy; 2025 Kurt Daryll Deveza. Get in touch with me anytime.</p>
+            <div class="social-icons">
+                <a href="https://myaccount.google.com/u/1/" target="_blank" title="Email me">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.instagram.com/callme.dryll/" target="_blank" title="Follow on Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://discord.com/channels/@me" target="_blank" title="Join on Discord">
+                    <i class="fab fa-discord"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
